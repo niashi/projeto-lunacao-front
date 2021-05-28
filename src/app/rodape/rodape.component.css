@@ -1,0 +1,16 @@
+ul.tecnologias{
+  list-style: none;
+  padding: 0;
+}
+
+ul.tecnologias li{
+  display: inline;
+  margin: 0;
+  padding: 5px;
+}
+
+.tamanho{
+  width: 30px;
+  height: 30px;
+}
+
