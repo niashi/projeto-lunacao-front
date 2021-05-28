@@ -1,0 +1,9 @@
+.bg-color{
+    background-color: #F6F0E6; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
