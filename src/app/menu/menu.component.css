@@ -1,0 +1,20 @@
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+.tm-logo {
+    width: 70px;
+    height: 70px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: #E09891;
+}
+
+.divisoria {
+    color: black;
+}
