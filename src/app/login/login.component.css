@@ -1,0 +1,11 @@
+#img-bg{
+    /*     background-image: url('https://image.freepik.com/vetores-gratis/fundo-realista-de-luzes-de-neon_52683-60462.jpg';
+     */     
+        background-color:gray;
+        
+         min-height: 845px;
+     
+         background-position: center;
+         background-repeat: no-repeat;  
+         background-size: cover;
+     }
