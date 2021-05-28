@@ -1,6 +1,6 @@
 .bg-color{
-    background-color: #F6F0E6; 
-    position: fixed;
+    background-color: #F6F0E6;
+    position: relative;
     top: 0;
     left: 0;
     min-width: 100%;
