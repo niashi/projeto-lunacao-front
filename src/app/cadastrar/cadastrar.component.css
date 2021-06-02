@@ -1,11 +1,35 @@
-#img-bg {
-    /* background-image: url(); */
-
-    background-color: #f1f1f1;
-
-    min-height: 970px;
-
-   /*  background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+ body, html{
+height: 100%;
+display: grid;
 }
+
+#img-bg {
+    
+
+   /*  background-image: url('');  */
+
+    background-color: #E0BA8A;
+
+    min-height: 970px; 
+
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+} 
+
+ .card {
+    background-color: #ffffff80;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000060;
+    width: 500px;
+  } 
+
+   .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+  } 
+
+
