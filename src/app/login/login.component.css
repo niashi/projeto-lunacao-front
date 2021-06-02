@@ -1,11 +1,26 @@
 #img-bg{
-    /*     background-image: url('https://image.freepik.com/vetores-gratis/fundo-realista-de-luzes-de-neon_52683-60462.jpg';
-     */     
-        background-color: #f1f1f1;
-        
-         min-height: 845px;
-     
+         background-image: url('https://i.imgur.com/mINy3ZY.png');
+
+        /*background-color: #f1f1f1;*/
+
+         min-height: 970px;
+
          background-position: center;
-         background-repeat: no-repeat;  
+         background-repeat: no-repeat;
          background-size: cover;
-     }
+}
+
+     .card {
+      background-color: #ffffff80;
+      padding: 30px;
+      border-radius: 4%;
+      box-shadow: 3px 3px 1px 0px #00000060;
+      width: 500px;
+    }
+
+     .container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 100px;
+    }
