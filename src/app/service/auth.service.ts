@@ -15,7 +15,7 @@ export class AuthService {
     
   ) { }
 
-  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
+  logar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
     return this.http.post<UsuarioLogin>(`${environment.server}/usuarios/logar`, usuarioLogin)
   }
 

@@ -1,73 +1,76 @@
 <!-- <p>cadastrar works!</p> -->
 
- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
-    
+
         <div class="col-md-12" id="img-bg">
 
             <div class="container">
-            <div class="card">
+                <div class="card">
 
-        <div class="col-md-4 m-auto d-flex justify-content-center">
 
-            <div class="row  mb-5 d-flex justify-content-center">
-                <div class="col-md-10">
 
-                    <h1 class="text-center">Cadastro</h1>
+                    <div class="row  mb-5 d-flex justify-content-center">
+                        <div class="col-md-10">
 
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+                            <h1 class="text-center">Cadastro</h1>
+
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
+                                    placeholder="Seu nome">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="usuario">Usuario</label>
+                                <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="usuario"
+                                    id="usuario" placeholder="Seu usuário">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="foto">Link da foto</label>
+                                <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto"
+                                    placeholder="Link de sua foto">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senha">Senha</label>
+                                <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha"
+                                    id="senha" placeholder="Sua senha">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmSenha">Confirmar Senha</label>
+                                <input [(ngModel)]='usuario.senha' class="form-control" type="password"
+                                    name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tipo">Tipo de usuário</label>
+                                <select class="form-control" name="tipo" id="tipo" (change)='tipoUsuario($event)'>
+                                    <option value="">Tipo de usuário</option>
+                                    <option value="comum">Comum</option>
+                                    <option value="doador">Doador</option>
+                                    <option value="adm">Administrador</option>
+                                </select>
+                            </div>
+
+                            <hr class="mt-5 mb-5">
+
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-danger mr-4" routerLink='/logar'>Cancelar</button>
+                                <button type="submit" class="btn btn-success" (click)='cadastrar()'> Cadastrar</button>
+
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="usuario">Usuario</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="foto">Link da foto</label>
-                        <input class="form-control" type="text" name="foto" id="foto" placeholder="Link de sua foto">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirmSenha">Confirmar Senha</label>
-                        <input class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                            placeholder="Confirme sua senha">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tipo">Tipo de usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
-                            <option value="">Tipo de usuário</option>
-                            <option value="normal">Comum</option>
-                            <option value="adm">Doador</option>
-                            <option value="adm">Administrador</option>
-                        </select>
-                    </div>
-
-                    <hr class="mt-5 mb-5">
-
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-danger mr-4" routerLink='/login'>Cancelar</button>
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
-
-                    </div>
-                </div>
                 </div>
             </div>
-            </div>
-        </div>
-    
-        
+
+
         </div>
 
     </div>
 
-</div> 
-
+</div>

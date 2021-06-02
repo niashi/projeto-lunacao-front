@@ -4,18 +4,22 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EducativoComponent } from './educativo/educativo.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { InicioComponent } from './inicio/inicio.component';
+
 
 const routes: Routes = [
 
   {path:'' , redirectTo: 'principal' , pathMatch: 'full'},
 
-  {path:'login' , component: LoginComponent},
+  {path:'logar' , component: LoginComponent},
 
   {path:'cadastrar', component:CadastrarComponent},
 
   {path:'educativo' , component: EducativoComponent},
 
-  {path: 'principal' , component: PrincipalComponent}
+  {path: 'principal' , component: PrincipalComponent},
+
+  {path: 'inicio' , component: InicioComponent}
 ] 
 
 @NgModule({
