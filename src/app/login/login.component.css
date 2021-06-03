@@ -1,26 +1,43 @@
 #img-bg{
-         background-image: url('https://i.imgur.com/mINy3ZY.png');
+      background-image: url('https://i.imgur.com/ZP9V6FL.png');
 
-        /*background-color: #f1f1f1;*/
+      /*background-color: #f1f1f1;*/
 
-         min-height: 970px;
+      min-height: 970px;
 
-         background-position: center;
-         background-repeat: no-repeat;
-         background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
-     .card {
-      background-color: #ffffff80;
-      padding: 30px;
-      border-radius: 4%;
-      box-shadow: 3px 3px 1px 0px #00000060;
-      width: 500px;
+.card {
+    background-color: #ffffff80;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000060;
+    width: 500px;
     }
 
-     .container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: 100px;
-    }
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.fa-eye{
+    position:absolute ;
+    top: 55px;
+    right: 10px;
+    cursor: pointer;
+    color:black ;
+}
+
+.label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+

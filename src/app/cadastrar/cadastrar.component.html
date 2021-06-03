@@ -1,4 +1,7 @@
 <!-- <p>cadastrar works!</p> -->
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <div class="container-fluid">
     <div class="row">
@@ -33,8 +36,9 @@
                                     placeholder="Link de sua foto">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group label-float">
                                 <label for="senha">Senha</label>
+                                <i class="fa fa-eye" aria-hidden="true"></i>
                                 <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha"
                                     id="senha" placeholder="Sua senha">
                             </div>

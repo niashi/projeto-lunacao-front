@@ -13,7 +13,7 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario
   confirmarSenha: string
   tipoUser: string
-  
+
 
   constructor(
     private authService: AuthService,
@@ -23,6 +23,8 @@ export class CadastrarComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
+    this.mostrarSenha()
+    this.mostrarConfirmSenha()
   }
 
   confirmSenha(event: any) {
@@ -32,7 +34,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   tipoUsuario(event: any) {
-    this.tipoUser = event.target.value  
+    this.tipoUser = event.target.value
   }
 
   cadastrar() {
@@ -49,5 +51,32 @@ export class CadastrarComponent implements OnInit {
     }
   }
 
-  
+  mostrarSenha() {
+    let btn = document.querySelector('.fa-eye')
+
+    btn?.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#senha')
+
+      if (inputSenha?.getAttribute('type') == 'password') {
+        inputSenha?.setAttribute('type', 'text')
+      } else {
+        inputSenha?.setAttribute('type', 'password')
+      }
+    })
+  }
+
+  mostrarConfirmSenha() {
+    let btn = document.querySelector('.fa-eye')
+
+    btn?.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#confirmSenha')
+
+      if (inputSenha?.getAttribute('type') == 'password') {
+        inputSenha?.setAttribute('type', 'text')
+      } else {
+        inputSenha?.setAttribute('type', 'password')
+      }
+    })
+  }
+
 }

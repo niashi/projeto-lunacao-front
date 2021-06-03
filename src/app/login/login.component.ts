@@ -16,18 +16,18 @@ export class LoginComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private router: Router
-
-
   ) { }
 
   ngOnInit() {
+    this.mostrarSenha()
+    /* this.entrar() */
   }
 
   logar() {
     this.auth.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp
 
-      environment.token = this.usuarioLogin.token 
+      environment.token = this.usuarioLogin.token
       environment.nome = this.usuarioLogin.nome
       environment.foto = this.usuarioLogin.foto
       environment.id = this.usuarioLogin.id
@@ -39,5 +39,36 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+  mostrarSenha() {
+    let btn = document.querySelector('.fa-eye')
+
+    btn?.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#senha')
+
+      if (inputSenha?.getAttribute('type') == 'password') {
+        inputSenha?.setAttribute('type', 'text')
+      } else {
+        inputSenha?.setAttribute('type', 'password')
+      }
+    })
+  }
+
+  /* entrar(){
+    let usuario = document.querySelector('#usuario')
+    let userLabel = document.querySelector('#userLabel')
+
+    let senha = document.querySelector('#senha')
+    let senhaLabel = document.querySelector('#senhaLabel')
+
+     let msgError = document.querySelector('#msgError')
+    let listaUser = []
+
+    let userValid = {
+      nome: '',
+      user: '',
+      senha: ''
+    }
+  } */
 
 }
