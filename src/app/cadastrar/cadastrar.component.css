@@ -57,8 +57,6 @@ display: grid;
 .label-float{
     position: relative;
     padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
 }
 
 /* .label-float input:focus{
