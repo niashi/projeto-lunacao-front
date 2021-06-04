@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EducativoComponent } from './educativo/educativo.component';
 import { PrincipalComponent } from './principal/principal.component';
-import { InicioComponent } from './inicio/inicio.component';
+
 
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
 
   {path: 'principal' , component: PrincipalComponent},
 
-  {path: 'inicio' , component: InicioComponent}
+  
 ] 
 
 @NgModule({

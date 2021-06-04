@@ -12,7 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PrincipalComponent } from './principal/principal.component';
-import { InicioComponent } from './inicio/inicio.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { InicioComponent } from './inicio/inicio.component';
     LoginComponent,
     CadastrarComponent,
     PrincipalComponent,
-    InicioComponent
+    
   ],
   imports: [
     BrowserModule,
