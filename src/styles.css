@@ -19,10 +19,17 @@
     height: 146px;
 }
 
-.carousel-inner {
+/* .carousel-inner {
     height: 500px;
-    
+
+} */
+
+html{
+  scroll-behavior: smooth;
 }
 
+/* #grad {
+  background-image: linear-gradient(#F8E2C5, #E0BA8A);
+} */
 
 
