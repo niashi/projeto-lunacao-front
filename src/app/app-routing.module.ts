@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EducativoComponent } from './educativo/educativo.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 
 
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path:'educativo' , component: EducativoComponent},
 
   {path: 'principal' , component: PrincipalComponent},
+
+  {path: 'categoria' , component: CategoriaComponent},
 
   
 ] 

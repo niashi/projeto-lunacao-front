@@ -78,6 +78,16 @@
 </div>
 <!--/Jumbotron produtos-->
 
+<!-- BOTÃO DE NOVAS POSATGENS -->
+
+<div class="row d-flex justify-content-center mb-4">
+  <div class="col-md-12 d-flex justify-content-center">
+    <button data-toggle="modal" data-target="#novaPostagem" class="btn btn-info">Cadastrar um Produto</button>
+  </div>
+</div>
+
+<!-- BOTÃO DE NOVAS POSATGENS -->
+
 <!--Card Slider-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
@@ -325,6 +335,62 @@
     </div>
   </div>
 <!--/Colaboradores-->
+
+
+
+
+
+
+<!-- MODAL DE NOVAS POSATGENS -->
+
+<!-- Button trigger modal 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#novaPostagem">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Novo Produto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="imagem">Imagem</label>
+          <input type="imagem" class="form-control" id="imagem" placeholder="Coloque aqui o link da Imagem">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="titulo">Escolha uma Categoria ou <a data-dismiss="modal" routerLink='/categoria'>Cadastre um novo</a></label>
+         <select name="categoria" id="categoria" class="form-control">
+           <option value="">Categoria</option>
+         </select>
+        </div>
+
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE NOVAS POSATGENS -->
 
 
 

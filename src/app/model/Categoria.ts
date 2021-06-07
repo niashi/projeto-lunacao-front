@@ -6,7 +6,7 @@ export class Categoria {
 
     public descricao: string
 
-    public reut_descart: boolean
+    //public reut_descart: boolean
 
     public produto: Produto[]
 }

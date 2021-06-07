@@ -13,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PrincipalComponent } from './principal/principal.component';
     LoginComponent,
     CadastrarComponent,
     PrincipalComponent,
+    CategoriaComponent,
 
   ],
   imports: [

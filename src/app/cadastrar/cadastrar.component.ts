@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
-  usuario: Usuario = new Usuario
+    usuario: Usuario = new Usuario
   confirmarSenha: string
   tipoUser: string
 
