@@ -35,6 +35,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+
   ],
   providers: [{
     provide: LocationStrategy,
