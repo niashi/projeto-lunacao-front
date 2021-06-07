@@ -1,10 +1,42 @@
 .bg-color{
-    background-color: #F6F0E6;
-    position: relative;
+    background-color: #F6F0E6; 
+    position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  
 }
 
+<<<<<<< HEAD
 
+=======
+.p1{
+    font-size: 22px;
+}
+
+.p1-1 {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.img{
+    width: 600px;
+    height: 600px;
+    align-items: center;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.card-img{
+    width: 300px;
+    height: 300px;
+}
+
+.card-txt{
+    font-size: 14px;
+}
+>>>>>>> eac6b6b96cbc4bbe82ce153cca2e721ea1fce9f1
