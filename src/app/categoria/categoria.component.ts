@@ -23,7 +23,7 @@ export class CategoriaComponent implements OnInit {
   ngOnInit() {
 
     if(environment.token == ''){
-      this.router.navigate(['/logar'])
+      this.router.navigate(['/categoria'])
     }
 
     this.findAllCategorias()
