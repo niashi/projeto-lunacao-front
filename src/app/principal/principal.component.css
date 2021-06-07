@@ -106,5 +106,21 @@ body {
 }
 /*/Card */
 
+ul.social-network{
+  list-style: none;
+  padding: 0;
+}
+
+ul.social-network li{
+  display: inline;
+  margin: 0;
+  padding: 5px;
+}
+
+/* .card{
+  height: 50;
+  width: 50;
+} */
+
 
 
