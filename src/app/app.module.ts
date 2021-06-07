@@ -9,7 +9,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { EducativoComponent } from './educativo/educativo.component';
-<<<<<<< HEAD
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -18,9 +17,6 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
-=======
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
->>>>>>> eac6b6b96cbc4bbe82ce153cca2e721ea1fce9f1
 
 @NgModule({
   declarations: [
@@ -39,12 +35,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     HttpClientModule,
     FormsModule
-=======
-    FontAwesomeModule
->>>>>>> eac6b6b96cbc4bbe82ce153cca2e721ea1fce9f1
   ],
   providers: [{
     provide: LocationStrategy,
