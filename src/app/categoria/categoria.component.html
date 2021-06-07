@@ -54,29 +54,18 @@
                     
                   </tr>
                 </thead>
+                
                 <tbody>
-                  <!-- <tr *ngFor='let categoria of listaCategorias'> -->
-                    <tr>
-                    <!-- <th>{{categoria.id}}</th>
-                    <td>{{categoria.descricao}}</td> -->
-                    <th>1</th>
-                    <td>Descartavel</td>
-                    <td class="d-flex justify-content-end" >
-                      <button class="btn btn-info" >Editar</button>
-                    </td>
+                  <tr *ngFor='let categoria of listaCategorias'>
+                      <th>{{categoria.id}}</th>
+                      <td>{{categoria.descricao}}</td>
+                      <td class="d-flex justify-content-end">
+                        <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
+                        <button class="btn btn-danger mr-3" [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
 
-                    <tr>
-                      <!-- <th>{{categoria.id}}</th>
-                      <td>{{categoria.descricao}}</td> -->
-                      <th>2</th>
-                      <td>Reutilizavel</td>
-                      <td class="d-flex justify-content-end" >
-                        <button class="btn btn-info" >Editar</button>
                       </td>
-                    
                   </tr>
-                  
-                </tbody>
+                </tbody> 
               </table>
               
         </div>
