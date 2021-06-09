@@ -99,18 +99,18 @@
   <div class="carousel-inner" role="listbox">
     <nav>
       <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-       
+
         <a class="nav-item nav-link active" id="nav-todosProdutos-tab" data-toggle="tab" href="#nav-todosProdutos" role="tab" aria-controls="nav-todosProdutos" aria-selected="true">Todos os Produtos</a>
-        
+
         <a (click)='findByIdUsuario()' class="nav-item nav-link" id="nav-meusProdutos-tab" data-toggle="tab" href="#nav-meusProdutos" role="tab" aria-controls="nav-meusProdutos" aria-selected="false">Meus Produtos</a>
-        
+
         <a class="nav-item nav-link" id="nav-produtosCategoria-tab" data-toggle="tab" href="#nav-produtosCategoria" role="tab" aria-controls="nav-produtosCategoria" aria-selected="false">Produtos por Categoria</a>
       </div>
     </nav>
     <div class="tab-content mt-5" id="nav-tabContent">
-    
+
       <div class="tab-pane fade show active" id="nav-todosProdutos" role="tabpanel" aria-labelledby="nav-todosProdutos-tab">
-        
+
         <div class="card-columns">
           <div class="card text-center" *ngFor='let item of listaProdutos'>
             <div class="card-body">
@@ -123,10 +123,10 @@
 
         </div>
       </div>
-      
+
       <div class="tab-pane fade" id="nav-meusProdutos" role="tabpanel" aria-labelledby="nav-meusProdutos-tab">
-        
-        
+
+
         <div class="card-columns">
           <div class="card text-center" *ngFor='let item of usuario.produto'>
             <div class="card-body">
@@ -134,13 +134,19 @@
               <small class="text-muted" >Categoria: {{item.categoria.descricao}} </small>
               <p class="card-text">{{item.descricao}}</p>
               <!-- <p class="card-text"><small class="text-muted">{{}}</small></p> -->
+
+              <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+              <a class="text-danger" href="">Apagar</a>
+
+              <!-- colocar routerLink no botão apagar -->
+
             </div>
           </div>
 
         </div>
 
       </div>
-      
+
       <div class="tab-pane fade" id="nav-produtosCategoria" role="tabpanel" aria-labelledby="nav-produtosCategoria-tab">
 
         <div class="card-columns" *ngFor='let categoria of listaCategorias'>
@@ -175,7 +181,7 @@
 
       -->
 
-      
+
 
       <!-- <div class="col-md-3" style="float:left">
         <div class="card mb-2">
@@ -214,7 +220,7 @@
         </div>
       </div> -->
 
-    </div> 
+    </div>
     <!--/.First slide-->
 
     <!--Second slide-->
@@ -407,8 +413,9 @@
         </button>
       </div>
       <div class="modal-body">
+
         <div class="form-group">
-          <label for="titulo">Título</label>
+          <label for="titulo">Nome</label>
           <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo" placeholder="Digite o título">
         </div>
 
@@ -418,12 +425,12 @@
         </div> -->
 
         <div class="form-group">
-          <label for="texto">Texto</label>
+          <label for="texto">Descrição</label>
           <textarea [(ngModel)]='produto.descricao' class="form-control" name="texto" id="texto" rows="3"></textarea>
         </div>
 
         <div class="form-group">
-          <label for="titulo">Escolha uma Categoria ou <a data-dismiss="modal" routerLink='/categoria'>Cadastre um novo</a></label>
+          <label for="titulo">Escolha uma categoria ou <a data-dismiss="modal" routerLink='/categoria'>Cadastre uma nova</a></label>
          <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
            {{item.descricao}}

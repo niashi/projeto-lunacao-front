@@ -1,3 +1,4 @@
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -25,11 +26,13 @@ const routes: Routes = [
   {path: 'categoria' , component: CategoriaComponent},
 
   {path: 'categoria-edit/:id', component: CategoriaEditComponent},
-  
-  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent}
 
-  
-] 
+  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
+
+  {path: 'produto-edit/:id', component: ProdutoEditComponent}
+
+
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
