@@ -31,7 +31,8 @@ export class ProdutoEditComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/logar'])
+      // alert('Sua sessão expirou, entre novamente!')
     }
 
      let id = this.route.snapshot.params['id']

@@ -22,6 +22,7 @@ export class CategoriaEditComponent implements OnInit {
   ngOnInit(){
     if (environment.token == ''){
       this.router.navigate(['/logar'])
+      // alert('Sua sessão expirou, entre novamente!')
     }
     
     let id = this.route.snapshot.params['id']

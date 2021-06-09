@@ -23,7 +23,9 @@ export class CategoriaComponent implements OnInit {
   ngOnInit() {
 
     if(environment.token == ''){
-      this.router.navigate(['/categoria'])
+      this.router.navigate(['/logar'])
+       // alert('Sua sessão expirou, entre novamente!')
+        
     }
 
     this.findAllCategorias()
