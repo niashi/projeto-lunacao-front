@@ -18,6 +18,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
+import { MenuLoginComponent } from './menu-login/menu-login.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
     ProdutoEditComponent,
     UserEditComponent,
     MenuLogadoComponent,
+    MenuLoginComponent,
 
   ],
   imports: [
