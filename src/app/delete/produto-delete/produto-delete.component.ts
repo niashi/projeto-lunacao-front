@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { CategoriaService } from 'src/app/service/categoria.service';
+import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -15,8 +16,6 @@ export class ProdutoDeleteComponent implements OnInit {
   produto: Produto = new Produto()
 
   categoria: Categoria = new Categoria()
-  listaCategorias: Categoria[]
-  idCategoria: number
   idProduto: number
 
   constructor(
