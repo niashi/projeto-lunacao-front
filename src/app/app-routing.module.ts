@@ -8,6 +8,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 
 
@@ -29,7 +30,9 @@ const routes: Routes = [
 
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
 
-  {path: 'produto-edit/:id', component: ProdutoEditComponent}
+  {path: 'produto-edit/:id', component: ProdutoEditComponent},
+
+  {path: 'produto-delete/:id', component: ProdutoDeleteComponent}
 
 
 ]

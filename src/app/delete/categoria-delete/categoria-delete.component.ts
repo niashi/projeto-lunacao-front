@@ -21,6 +21,9 @@ export class CategoriaDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    window.scroll(0,0)
+    
     if (environment.token == ''){
       this.router.navigate(['/logar'])
     }
@@ -38,7 +41,7 @@ export class CategoriaDeleteComponent implements OnInit {
   apagar(){
     this.categoriaService.deleteCategoria(this.idCategoria).subscribe(()=>{
     alert('Categoria apagada com sucesso!')
-    this.router.navigate(['/categoria'])
+    this.router.navigate(['/principal'])
     })
   }
 }
