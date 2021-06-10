@@ -36,4 +36,23 @@ export class AuthService {
 
     return ok
   }
+
+  adm() {
+    let ok: boolean = false
+    if  (environment.tipo == 'adm') {
+      ok = true
+    }
+
+    return ok
+  }
+
+  doador() {
+    let ok: boolean = false
+    if  (environment.tipo == 'doador') {
+      ok = true
+    }
+
+    return ok
+  }
+  
 }

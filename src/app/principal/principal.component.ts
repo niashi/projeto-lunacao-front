@@ -33,7 +33,7 @@ export class PrincipalComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private catogoriaService: CategoriaService,
-    private authService: AuthService,
+    public authService: AuthService,
     private alertas: AlertasService
 
   ) { }

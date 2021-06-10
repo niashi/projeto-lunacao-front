@@ -80,25 +80,43 @@
 
 <div class="row d-flex justify-content-center mb-4">
   <div class="col-md-12 d-flex justify-content-center">
-    <button data-toggle="modal" data-target="#novaPostagem" class="btn btn-info">Cadastrar um Produto</button>
+    <button *ngIf='authService.adm() || authService.doador()' data-toggle="modal" data-target="#novaPostagem" class="btn btn-info">Cadastrar um Produto</button>
   </div>
 </div>
 
 <!--   BOTÃO DE NOVAS POSATGENS   -->
 
 <!--   CARD SLIDER   -->
+ <div class="container"> 
+  <div class="row"> 
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
   <!--   INDICATORES   -->
   <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <li class="btn-floating" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li class="btn-floating" data-target="#multi-item-example" data-slide-to="1"></li>
   </ol>
   <!--   INDICATORES   -->
 
   <!--   SLIDES   -->
-   <div class="container">
+  
     <div class="carousel-inner" role="listbox">
+      
+
+        <div  class="carousel-item active">
+
+          <div *ngFor='let item of listaProdutos' class="col-md-3" style="float:left">
+           <div class="card mb-2">
+              <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">{{item.nome}}</h4>
+                <p class="card-text">{{item.descricao}}</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div> 
+
+       </div>
       <!--<nav>
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
@@ -170,22 +188,7 @@
  
 
        <!-- First slide -->
-       <div class="row">
-
-        <div class="carousel-item active">
-
-          <div class="col-md-3" style="float:left">
-           <div *ngFor='let item of listaProdutos' class="card mb-2">
-              <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">{{item.nome}}</h4>
-                <p class="card-text">{{item.descricao}}</p>
-                <a class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div> 
-
-       </div>
+       
      
 
       
@@ -310,9 +313,9 @@
 <!--/Jumbotron colaboradores-->
 
 <!--Colaboradores-->
+
 <div class="container">
   <div class="row">
-    <!-- <div class="col-md-12 d-flex justify-content-center"> -->
     <div class="col-md-12">
       <div class="row d-flex justify-content-center">
 
@@ -492,3 +495,7 @@
 
 
 <!-- MODAL DE NOVAS POSTAGENS -->
+
+
+
+

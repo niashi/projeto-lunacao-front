@@ -30,6 +30,11 @@ export class CategoriaComponent implements OnInit {
         
     }
 
+    if(environment.tipo != 'adm') {
+      this.alertas.showAlertInfo('Você precisa ser ADM para acessar essa tela')
+      this.router.navigate(['/principal'])
+    }
+
     this.findAllCategorias()
   }
 
