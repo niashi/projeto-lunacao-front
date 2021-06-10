@@ -5,6 +5,7 @@ import { environment } from './../../../environments/environment.prod';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Produto } from './../../model/Produto';
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-produto-edit',
@@ -23,7 +24,8 @@ export class ProdutoEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -32,7 +34,7 @@ export class ProdutoEditComponent implements OnInit {
 
     if(environment.token == ''){
       this.router.navigate(['/logar'])
-      // alert('Sua sessão expirou, entre novamente!')
+      this.alertas.showAlertInfo('Sua sessão expirou, entre novamente!')
     }
 
      let id = this.route.snapshot.params['id']
@@ -65,7 +67,7 @@ export class ProdutoEditComponent implements OnInit {
 
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      alert('Produto atualizado com sucesso!')
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/principal'])
     })
   }

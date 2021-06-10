@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
@@ -29,7 +30,8 @@ export class PrincipalComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private catogoriaService: CategoriaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
 
   ) { }
 
@@ -78,7 +80,7 @@ export class PrincipalComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      alert('Produto cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
       this.produto = new Produto
       this.getAllProdutos()
     })

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/principal'])
     }, erro =>{
       if (erro.status == 500) {
-        alert('Usuário ou senha estão incorretos!')
+        this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
       }
     })
   }
@@ -55,22 +57,5 @@ export class LoginComponent implements OnInit {
       }
     })
   }
-
-  /* entrar(){
-    let usuario = document.querySelector('#usuario')
-    let userLabel = document.querySelector('#userLabel')
-
-    let senha = document.querySelector('#senha')
-    let senhaLabel = document.querySelector('#senhaLabel')
-
-     let msgError = document.querySelector('#msgError')
-    let listaUser = []
-
-    let userValid = {
-      nome: '',
-      user: '',
-      senha: ''
-    }
-  } */
-
+  
 }

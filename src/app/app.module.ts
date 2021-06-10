@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common'
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -17,6 +18,8 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+
 
 @NgModule({
   declarations: [
@@ -31,14 +34,16 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
     CategoriaEditComponent,
     CategoriaDeleteComponent,
     ProdutoEditComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+    AlertasComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,
