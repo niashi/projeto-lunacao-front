@@ -9,8 +9,6 @@ export class Produto {
 
     public descricao: string
 
-    public doado: boolean
-
     public usuario: Usuario
 
     public categoria: Categoria
