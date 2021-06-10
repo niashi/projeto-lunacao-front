@@ -117,7 +117,8 @@
           aria-labelledby="nav-todosProdutos-tab">
 
           <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of listaProdutos'>
+            <div class="card text-center"
+            *ngFor='let item of listaProdutos | orderBy : key : reverse'>
               <div class="card-body">
                 <h5 class="card-title">{{item.nome}}</h5>
                 <small class="text-muted">Categoria: {{item.categoria.descricao}} </small>
@@ -133,7 +134,7 @@
 
 
           <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of usuario.produto'>
+            <div class="card text-center" *ngFor='let item of usuario.produto | orderBy : key : reverse'>
               <div class="card-body">
                 <h5 class="card-title">{{item.nome}}</h5>
                 <small class="text-muted">Categoria: {{item.categoria.descricao}} </small>
@@ -153,8 +154,8 @@
         <div class="tab-pane fade" id="nav-produtosCategoria" role="tabpanel"
           aria-labelledby="nav-produtosCategoria-tab">
 
-          <div class="card-columns" *ngFor='let categoria of listaCategorias'>
-            <div class="card text-center" *ngFor='let item of categoria.produto'>
+          <div class="card-columns" *ngFor='let categoria of listaCategorias  | orderBy : key : reverse'>
+            <div class="card text-center" *ngFor='let item of categoria.produto  | orderBy : key : reverse'>
               <div class="card-body">
                 <h5 class="card-title">{{item.nome}}</h5>
                 <p class="card-text">{{item.descricao}}</p>
@@ -464,7 +465,7 @@
               nova</a></label>
           <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
             (change)='findByIdCategoria()'>
-            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
+            <option *ngFor='let item of listaCategorias | orderBy : key : reverse' value="{{item.id}}">
               {{item.descricao}}
             </option>
           </select>
