@@ -31,6 +31,10 @@ export class ProdutoService {
     return this.http.put<Produto>(`${environment.server}/produto`, produto, this.token)
   }
 
-  /* fazer o metodo de delete */
+  deleteProduto(id: number) {
+    return this.http.delete(`${environment.server}/${id}`, this.token)
+  }
+
+  /* fazer o metodo de delete OK*/
 
 }
