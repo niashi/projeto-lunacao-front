@@ -116,6 +116,14 @@
         <div class="tab-pane fade show active" id="nav-todosProdutos" role="tabpanel"
           aria-labelledby="nav-todosProdutos-tab">
 
+          <div class="row d-flex justify-content-center mt-5 mb-5">
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" id="nome" placeholder="Digite um nome de produto para pesquisar" [(ngModel)]='nomePost' (keyup)='findByNomeProduto()'>
+              </div>
+            </div>
+          </div>
+
           <div class="card-columns">
             <div class="card text-center" *ngFor='let item of listaProdutos'>
               <div class="card-body">
@@ -153,6 +161,14 @@
         <div class="tab-pane fade" id="nav-produtosCategoria" role="tabpanel"
           aria-labelledby="nav-produtosCategoria-tab">
 
+          <div class="row d-flex justify-content-center mt-5 mb-5">
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" id="nome" placeholder="Digite uma categoria para pesquisar" [(ngModel)]='descricaoCategoria' (keyup)='findByDescricaoCategoria()'>
+              </div>
+            </div>
+          </div>
+
           <div class="card-columns" *ngFor='let categoria of listaCategorias'>
             <div class="card text-center" *ngFor='let item of categoria.produto'>
               <div class="card-body">
@@ -179,9 +195,9 @@
             <a class="btn btn-primary">Button</a>
           </div>
         </div>
-      </div> 
+      </div>
 
-      
+
 
 
 

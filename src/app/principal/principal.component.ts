@@ -17,10 +17,12 @@ export class PrincipalComponent implements OnInit {
 
   categoria: Categoria = new Categoria
   listaProdutos: Produto[]
+  nomePost: string
 
   produto: Produto = new Produto()
   listaCategorias: Categoria[]
   idCategoria: number
+  descricaoCategoria: string
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
@@ -74,7 +76,7 @@ export class PrincipalComponent implements OnInit {
     this.produto.categoria = this.categoria
 
     this.usuario.id = this.idUsuario
-    this.produto.usuario = this.usuario 
+    this.produto.usuario = this.usuario
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
@@ -82,5 +84,25 @@ export class PrincipalComponent implements OnInit {
       this.produto = new Produto
       this.getAllProdutos()
     })
+  }
+
+  findByNomeProduto(){
+    if(this.nomePost == ''){
+      this.getAllProdutos()
+    } else{
+      this.produtoService.getByNomeProduto(this.nomePost).subscribe((resp: Produto[])=>{
+        this.listaProdutos = resp
+      })
+    }
+  }
+
+  findByDescricaoCategoria(){
+    if(this.descricaoCategoria == ''){
+      this.getAllCategorias()
+    } else{
+      this.catogoriaService.getByDescricaoCategoria(this.descricaoCategoria).subscribe((resp: Categoria[])=>{
+        this.listaCategorias = resp
+      })
+    }
   }
 }
