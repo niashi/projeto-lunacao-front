@@ -9,6 +9,8 @@ export class Produto {
 
     public descricao: string
 
+    public imagem: string
+
     public usuario: Usuario
 
     public categoria: Categoria

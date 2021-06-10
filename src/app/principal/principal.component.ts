@@ -19,10 +19,13 @@ export class PrincipalComponent implements OnInit {
   categoria: Categoria = new Categoria
   listaProdutos: Produto[]
 
+  
+
   produto: Produto = new Produto()
   listaCategorias: Categoria[]
   idCategoria: number
 
+  
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
@@ -44,8 +47,10 @@ export class PrincipalComponent implements OnInit {
     this.getAllCategorias()
     this.getAllProdutos()
     /* this.getByIdUsuario() */
+    
   }
 
+  
   getAllCategorias(){
     this.catogoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
       this.listaCategorias = resp
@@ -62,6 +67,7 @@ export class PrincipalComponent implements OnInit {
     getAllProdutos() {
       this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
         this.listaProdutos = resp
+        
       })
     }
 
@@ -71,13 +77,14 @@ export class PrincipalComponent implements OnInit {
       })
     }
 
+    
   publicar(){
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
     this.usuario.id = this.idUsuario
     this.produto.usuario = this.usuario 
-
+    console.log(this.produto)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
       this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')

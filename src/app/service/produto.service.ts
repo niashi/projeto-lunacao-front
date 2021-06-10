@@ -32,9 +32,7 @@ export class ProdutoService {
   }
 
   deleteProduto(id: number) {
-    return this.http.delete(`${environment.server}/${id}`, this.token)
+    return this.http.delete(`${environment.server}/produto/${id}`, this.token)
   }
-
-  /* fazer o metodo de delete OK*/
 
 }
