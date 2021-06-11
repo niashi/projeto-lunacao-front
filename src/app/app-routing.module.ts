@@ -1,3 +1,4 @@
+/* import { UserEditComponent } from './edit/user-edit/user-edit.component'; */
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -32,7 +33,9 @@ const routes: Routes = [
 
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
 
-  {path: 'produto-delete/:id', component: ProdutoDeleteComponent}
+  {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+
+/*   {path: 'user-edit/:id', component: UserEditComponent} */
 
 
 ]

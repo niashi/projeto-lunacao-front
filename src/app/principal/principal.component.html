@@ -66,26 +66,33 @@
 <!--   CARROUSSEL   -->
 
 <!--   JUMBOTRON PRODUTOS   -->
-<div class="jumbotron jumbotron-fluid bg-faded mt-5" style="background-color: #FEF7D7;">
+<div class="jumbotron jumbotron-fluid bg-faded mt-5 p-4" style="background-color: #FEF7D7;">
   <div class="container d-flex justify-content-center">
     <h1 class="display-4 estilo" id="produtos">Produtos</h1>
   </div>
+
+  <div class="row d-flex justify-content-center mt-4">
+    <div class="col-md-12 d-flex justify-content-center">
+      <button *ngIf='authService.adm() || authService.doador()' data-toggle="modal" data-target="#novaPostagem" class=" btn text-light" style="background-color: rgba(112, 85, 69, 0.753);">Cadastrar um Produto</button>
+    </div>
+  </div>
+
 </div>
 <!--   JUMBOTRON PRODUTOS   -->
 
 <!--   BOTÃO DE NOVAS POSATGENS   -->
 
-<div class="row d-flex justify-content-center mb-4">
+<!-- <div class="row d-flex justify-content-center mb-4">
   <div class="col-md-12 d-flex justify-content-center">
     <button *ngIf='authService.adm() || authService.doador()' data-toggle="modal" data-target="#novaPostagem" class="btn btn-info">Cadastrar um Produto</button>
   </div>
-</div>
+</div> -->
 
 <!--   BOTÃO DE NOVAS POSATGENS   -->
 
 <!--   CARD SLIDER   -->
- <div class="container"> 
-  <div class="row"> 
+ <div class="container">
+  <div class="row">
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
   <!--   INDICATORES   -->
@@ -96,9 +103,9 @@
   <!--   INDICATORES   -->
 
   <!--   SLIDES   -->
-  
+
     <div class="carousel-inner" role="listbox">
-      
+
 
         <div  class="carousel-item active">
 
@@ -111,7 +118,7 @@
                 <a class="btn btn-primary">Button</a>
               </div>
             </div>
-          </div> 
+          </div>
 
        </div>
       <!--<nav>
@@ -180,9 +187,7 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div> -->
-=======
       </div>
 
 
@@ -198,20 +203,15 @@
             <a class="btn btn-primary">Button</a>
           </div>
         </div>
-      </div> 
+      </div>
 
-      
 
->>>>>>> 6e20e189d3aa56cdfe9343df79872acee62bdfb5
 
- 
 
-<<<<<<< HEAD
+
+
        <!-- First slide -->
       <!-- <div class="col-md-3" style="float:left">
-=======
-       <div class="col-md-3" style="float:left">
->>>>>>> 6e20e189d3aa56cdfe9343df79872acee62bdfb5
         <div class="card mb-2">
           <img class="card-img-top" width="209" height="209" src="https://imgur.com/zBSufTt" alt="Card image cap">
           <div class="card-body">
@@ -284,9 +284,9 @@
 <!--/Card Slider-->
 
 <!--Jumbotron colaboradores-->
-<div class="jumbotron jumbotron-fluid bg-faded mt-5" style="background-color: #FEF7D7;">
+<div class="jumbotron jumbotron-fluid bg-faded mt-5 p-5" style="background-color: #FEF7D7;">
   <div class="container d-flex justify-content-center">
-    <h1 class="display-4" id="grupo">Equipe</h1>
+    <h1 class="display-4 estilo" id="grupo">Equipe</h1>
   </div>
 </div>
 <!--/Jumbotron colaboradores-->
@@ -351,9 +351,7 @@
           <div class="divider"></div>
           <div class="name">Hugo</div>
           <div class="title">
-            <p class="mr-3 ml-3 text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora accusantium ab
-              blanditiis cum, omnis obcaecati voluptate temporibus. Dolorem a at facilis aperiam ratione eligendi
-              facere? Fugit soluta voluptate tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            <p class="mr-3 ml-3 text-justify">Sou uma pessoa bem comunicativa, minhas experiências de trabalho me moldaram uma pessoa com um senso critico, e tentando sempre achar um equilíbrio entre as ações, pensando no bem estar de todos visando os valores e princípios, o que me da brilho nos olhos é gerar valor para as pessoas através da tecnologia, busco sempre me aprimorar e conhecer um pouco sobre todo.
               </p>
           </div>
         </div>
@@ -382,9 +380,7 @@
           <div class="divider"></div>
           <div class="name">Kathleen</div>
           <div class="title">
-            <p class="mr-3 ml-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maiores assumenda minus,
-              inventore possimus alias, odio quae earum, rem cum labore nostrum repudiandae! Quis sed corporis qui dicta
-              libero corrupti.</p>
+            <p class="mr-3 ml-3 text-justify">Sou uma pessoa que ama aprender coisas novas, e na tecnologia tenho a oportunidade de estar sempre estudando. Com minhas experiências, aprendi a ter responsabilidade pessoal e ser persistente. E com isso, procuro a cada dia ser uma desenvolvedora melhor. Meu objetivo é poder fazer a diferença na vida das pessoas através da tecnologia.</p>
           </div>
         </div>
 
@@ -418,9 +414,7 @@
           <div class="divider"></div>
           <div class="name">Mathias</div>
           <div class="title">
-            <p class="mr-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maiores assumenda minus,
-              inventore possimus alias, odio quae earum, rem cum labore nostrum repudiandae! Quis sed corporis qui dicta
-              libero corrupti.</p>
+            <p class="mr-3 ml-3 text-justify">Sou Mathias, paulista e paulistano e tenho 26 anos. Sou filho de imigrantes uruguaios que me ensinaram, antes de mais nada, o que é o verdadeiro interesse pelas coisas do mundo e também me mostraram que preciso dar tudo de mim, sempre. Gosto de tudo, mas sobretudo de jogos de raciocínio e de estudar. Tenho fascínio por seguir evoluindo.</p>
           </div>
         </div>
         <!-- /Quarta pessoa -->
@@ -445,9 +439,7 @@
           <div class="divider"></div>
           <div class="name">Ruth</div>
           <div class="title">
-            <p class="mr-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maiores assumenda minus,
-              inventore possimus alias, odio quae earum, rem cum labore nostrum repudiandae! Quis sed corporis qui dicta
-              libero corrupti.</p>
+            <p class="mr-3 ml-3 text-justify">Aprendizado e interesses diversos fizeram parte de minha vida e essas características que me trouxeram para o âmbito da tecnologia com vontade de me desafiar e construir minha carreira em uma nova área, usando minha adaptabilidade e persistência, me tornei desenvolvedora full stack e busco me aprimorar continuamente.</p>
           </div>
         </div>
         <!-- /Quarta pessoa -->

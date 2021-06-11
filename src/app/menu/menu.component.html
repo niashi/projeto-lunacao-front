@@ -1,77 +1,77 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  
+
   <nav class="navbar navbar-expand-lg navbar-light">
-  
+
     <button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
       aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-  
+
       <span class="navbar-toggler-icon"></span>
-  
+
     </button>
-  
-  
+
+
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-  
+
       <div class="d-flex align-items-start">
-        <img src="https://i.imgur.com/lh7w0j5.png" alt="Logo do Projeto" class="tm-logo">
+        <img routerLink='/principal' src="https://i.imgur.com/lh7w0j5.png" alt="Logo do Projeto" class="tm-logo">
       </div>
-  
+
       <ul class="pl-2 pt-1 navbar-nav mr-auto d-flex align-items-start">
-  
+
         <li class="nav-item">
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" routerLink='/principal'>Página inicial <span
               class="sr-only">(página atual)</span></a>
         </li>
-  
+
         <li class="nav-item">
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" href="#produtos">Produtos</a>
         </li>
-  
+
         <li class="nav-item">
-          <a class="nav-link m-0 font-weight-bold text-blak fs-16" href="#grupo">O grupo</a>
+          <a class="nav-link m-0 font-weight-bold text-blak fs-16" href="#grupo">Equipe</a>
         </li>
-  
+
         <li class="nav-item">
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" routerLink='/educativo'>Educativo</a>
         </li>
       </ul>
-  
+
       <hr>
-  
+
       <ul class="p-2 navbar-nav ml-auto d-flex align-items-start" *ngIf='auth.logado() == false'>
-  
+
         <li class="nav-item">
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" routerLink='/cadastrar'>Cadastro</a>
         </li>
-  
+
         <li class="nav-item">
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" routerLink='/logar'>Login</a>
         </li>
       </ul>
-  
+
       <ul class="p-2 navbar-nav ml-auto d-flex align-items-center" *ngIf='auth.logado()'>
-  
+
         <li class="nav-item active">
           <img src="{{auth.fotoUser()}}" alt="Foto do usuário" width="50px" height="50px" class="img-fluid rounded-circle pic">
         </li>
         <li class="nav-item">
           <p class="m-0 font-regular txt fs-16 p-3">Olá, {{auth.nomeUser()}}</p>
         </li>
-  
+
         <li class="nav-item">
           <a [routerLink]="['/user-edit', auth.idUser()]">
             <i class="fa fa-pencil text-black fs-16" aria-hidden="true"></i>
           </a>
         </li>
-  
+
         <li class="nav-item">
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" (click)='logout()'>Sair<i
               class="fa fa-sign-out fa-out p-2" aria-hidden="true"></i></a>
         </li>
       </ul>
-  
+
     </div>
-  
+
   </nav>
