@@ -42,7 +42,7 @@ body {
   top: -200px;
 }
 .circle {
-  background-color: #fee7d3;
+  background-color: rgba(112, 85, 69, 0.753);
   border-radius: 50%;
   cursor: pointer;
   height: 380px;
@@ -144,7 +144,7 @@ span:after {
 
 /* estilo da palavra no jubutrom */
 .estilo{
-  font-size: 25px;
+  font-size: 30px;
   color: black;
   text-align: center;
   text-transform: uppercase;
