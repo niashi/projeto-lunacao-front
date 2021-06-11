@@ -1,10 +1,8 @@
 /* Colaboradores */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 body {
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #f6e6f1;
   display: flex;
-  font-family: "Merriweather", serif;
   flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
@@ -80,7 +78,7 @@ body {
   width: 466px;
 }
 .divider {
-  background-color: #ca6060;
+  background-color: #6B0101;
   height: 1px;
   width: 160px;
 }
@@ -93,7 +91,6 @@ body {
 }
 .title {
   color: #6e6e6e;
-  font-family: arial;
   font-size: 14px;
   font-style: italic;
   margin-top: 4px;
@@ -106,16 +103,14 @@ body {
 }
 /*/Card */
 
-/* body { background: #9cb8b3; } */
 
+/* estilo do nome do Projeto */
 .nomeProjeto {
-	  /* font: 600 1.5em/1 'Raleway', sans-serif; */
     font-size: 25px;
     color: rgba(0,0,0,.5);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
-    /* position: absolute; */
     top: 25%;
     width: 100%;
 }
@@ -144,6 +139,45 @@ span:after {
     left: .0875em;
     top: .0875em;
     z-index: -1;
-     -webkit-mask-image: url(https://f.cl.ly/items/1t1C0W3y040g1J172r3h/mask.png); 
+}
+/* estilo do nome do Projeto */
+
+/* estilo da palavra no jubutrom */
+.estilo{
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  /* position: absolute; */
+  top: 25%;
+  width: 100%;
+}
+/* estilo da palavra no jubutrom */
+
+/* redes socias */
+ul.s-network{
+  list-style: none;
+  padding: 0;
 }
 
+ul.s-network li {
+  display: inline;
+  margin: 0;
+  padding: 2px;
+}
+
+.fa {
+  font-size: 20pt;
+  color: rgb(92, 88, 88);
+  padding: 10px;
+}
+
+.fa-linkedin-square:hover {
+  color: #0072b1;
+}
+
+.fa-github-square:hover{
+  color: rgb(0, 0, 0);
+}
+/* redes sociais */
