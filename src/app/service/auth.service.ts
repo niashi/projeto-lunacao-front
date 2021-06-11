@@ -14,7 +14,7 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private router: Router
-    
+
   ) { }
 
   logar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
@@ -73,6 +73,16 @@ export class AuthService {
     let ok: boolean = true
     let rota = this.router.url
     if(rota.indexOf('logar') != -1 || rota.indexOf('cadastrar') != -1){
+      ok = false
+    }
+
+    return ok
+  }
+
+  itensMenuOf(){
+    let ok: boolean = true
+    let rota = this.router.url
+    if(rota.indexOf('principal') == -1){
       ok = false
     }
 

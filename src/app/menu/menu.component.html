@@ -25,11 +25,11 @@
               class="sr-only">(página atual)</span></a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf='auth.itensMenuOf()'>
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" href="#produtos">Produtos</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf='auth.itensMenuOf()'>
           <a class="nav-link m-0 font-weight-bold text-blak fs-16" href="#grupo">Equipe</a>
         </li>
 
