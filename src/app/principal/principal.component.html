@@ -108,7 +108,9 @@
               <div class="card-body">
                 <h4 class="card-title">{{item.nome}}</h4>
                 <p class="card-text">{{item.descricao}}</p>
-                <a class="btn btn-primary">Button</a>
+                <button class="btn btn-success mr-3 mb-2">Mais Informações</button>
+                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-edit', item.id]" class="btn btn-info mr-2">Editar</button>
+                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-delete', item.id]" class="btn btn-danger mr-3">Apagar</button>
               </div>
             </div>
           </div> 
@@ -180,9 +182,7 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div> -->
-=======
       </div>
 
 
@@ -202,7 +202,6 @@
 
       
 
->>>>>>> 6e20e189d3aa56cdfe9343df79872acee62bdfb5
 
  
 

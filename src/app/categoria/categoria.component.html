@@ -1,12 +1,12 @@
 <div class="comtainer-fluid">
 
     <div class="row">
-        
+
         <div class="col-md-12">
 
             <a routerLink='/principal' class="text-whith text-left">
                 <i class="fa fa-angle-double-left" aria-hidden="true" routerLink='/principal'></i> Principal
-                
+
             </a>
 
             <h1 class="fs-54 text-center">Categorias</h1>
@@ -18,7 +18,8 @@
 
                     <div class="form-group">
 
-                        <input [(ngModel)]='categoria.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição da Categoria">
+                        <input [(ngModel)]='categoria.descricao' type="text" class="form-control" id="descricao"
+                            placeholder="Digite a descrição da Categoria">
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -47,27 +48,29 @@
 
             <table class="table table-hover">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col" class="text-right">Modificações</th>
-                    
-                  </tr>
-                </thead>
-                
-                <tbody>
-                  <tr *ngFor='let categoria of listaCategorias'>
-                      <th>{{categoria.id}}</th>
-                      <td>{{categoria.descricao}}</td>
-                      <td class="d-flex justify-content-end">
-                        <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
-                        <button class="btn btn-danger mr-3" [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col" class="text-right">Modificações</th>
 
-                      </td>
-                  </tr>
-                </tbody> 
-              </table>
-              
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor='let categoria of listaCategorias'>
+                        <th>{{categoria.id}}</th>
+                        <td>{{categoria.descricao}}</td>
+                        <td class="d-flex justify-content-end">
+                            <button class="btn btn-info mr-3"
+                                [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
+                            <button class="btn btn-danger mr-3"
+                                [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
 
     </div>
