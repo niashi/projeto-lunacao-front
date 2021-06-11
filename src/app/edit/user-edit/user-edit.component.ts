@@ -1,4 +1,4 @@
-/* import { Usuario } from './../../model/Usuario';
+import { Usuario } from './../../model/Usuario';
 import { AuthService } from './../../service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -76,4 +76,4 @@ export class UserEditComponent implements OnInit {
    }
 
 }
- */
+

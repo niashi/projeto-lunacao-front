@@ -1,3 +1,4 @@
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -35,7 +36,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     CategoriaDeleteComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
-    AlertasComponent
+    AlertasComponent,
+    UserEditComponent
 
   ],
   imports: [
