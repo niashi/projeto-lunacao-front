@@ -16,10 +16,10 @@ export class EducativoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
+   /*  if(environment.token == ''){
       this.router.navigate(['/logar'])
       this.alertas.showAlertInfo('Sua sessão expirou, entre novamente!')
-    }
+    } */
   }
 
 }

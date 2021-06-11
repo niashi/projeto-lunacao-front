@@ -41,7 +41,7 @@ export class PrincipalComponent implements OnInit {
   ngOnInit(){
 
     if(environment.token == ''){
-      this.router.navigate(['/logar'])
+      this.router.navigate(['/principal'])
     }
 
     this.getAllCategorias()

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
@@ -11,7 +12,8 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
 export class AuthService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
     
   ) { }
 
@@ -54,5 +56,26 @@ export class AuthService {
 
     return ok
   }
-  
+
+  fotoUser(){
+    return environment.foto
+  }
+
+  nomeUser(){
+    return environment.nome
+  }
+
+  idUser(){
+    return environment.id
+  }
+
+  menuOf(){
+    let ok: boolean = true
+    let rota = this.router.url
+    if(rota.indexOf('logar') != -1 || rota.indexOf('cadastrar') != -1){
+      ok = false
+    }
+
+    return ok
+  }
 }

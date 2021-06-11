@@ -18,3 +18,21 @@
 .divisoria {
     color: black;
 }
+
+a {
+  cursor: pointer;
+}
+
+.fa-pencil{
+    color: #705D45;
+}
+
+.txt{
+    color: #705D45;
+    font-weight: bold;
+}
+
+.pic:hover{
+    width: 65px;
+    height: 65px;
+}

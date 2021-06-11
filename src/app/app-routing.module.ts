@@ -14,7 +14,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 
 const routes: Routes = [
 
-  {path:'' , redirectTo: 'principal' , pathMatch: 'full'},
+  {path:'', redirectTo: 'principal', pathMatch: 'full'},
 
   {path:'logar' , component: LoginComponent},
 
