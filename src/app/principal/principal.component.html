@@ -91,7 +91,7 @@
           <div class="card-body">
             <h4 class="card-title">{{item.nome}}</h4>
             <p class="card-text">{{item.descricao}}</p>
-            <button class="btn btn-outline-success mr-3 mb-2">Mais Informações</button>
+            <button class="btn btn-outline-success mr-3 mb-2">Solicitar doação</button>
             <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-edit', item.id]"
               class="btn btn-outline-info mr-2">Editar</button>
             <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-delete', item.id]"
