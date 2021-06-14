@@ -1,13 +1,10 @@
 #img-bg{
-      background-image: url('https://i.imgur.com/sQLfd7F.jpg');
-
-      /*background-color: #f1f1f1;*/
-
+      background-image: url('https://i.imgur.com/Ze59gOx.jpg');
       min-height: 970px;
-
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      position: fixed;
 }
 
 .card {
@@ -22,7 +19,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .fa-eye{

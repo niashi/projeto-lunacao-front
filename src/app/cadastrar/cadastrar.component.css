@@ -3,18 +3,13 @@ height: 100%;
 display: grid;
 }
 
-#img-bg {
-
-
-   background-image: url('https://i.imgur.com/sQLfd7F.jpg');
-
-    /*background-color: #E0BA8A;*/
-
-    min-height: 970px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#img-bg{
+  background-image: url('https://i.imgur.com/Ze59gOx.jpg');
+  min-height: 970px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
 }
 
  .card {
@@ -23,13 +18,14 @@ display: grid;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #00000060;
     width: 500px;
+    height: 720px;
   }
 
    .container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 40px;
   }
 
   .fa-eye{
@@ -40,43 +36,9 @@ display: grid;
     color:black ;
 }
 
-/* .label-float input{
-    width: 100%;
-    padding: 5px 5px;
-    display: inline-block;
-    border: 0;
-    border-bottom: 2px solid #000000;
-    background-color: transparent;
-    outline: none;
-    min-width: 180px;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    border-radius: 0;
-} */
 
 .label-float{
     position: relative;
     padding-top: 13px;
 }
-
-/* .label-float input:focus{
-    border-bottom: 2px solid #f5e6be;
-}
-
-.label-float label{
-    color: #000000;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 13px;
-    transition: all .3s ease-out;
-}
-
-.label-float input:focus + label,
-.label-float input:valid + label{
-    font-size: 13px;
-    margin-top: 0;
-    color: #f5e6be
-} */
 

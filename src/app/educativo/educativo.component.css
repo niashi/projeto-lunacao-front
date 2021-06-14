@@ -1,6 +1,5 @@
 .bg-color{
-/*     background-color: #F6F0E6; 
- */    top: 0;
+    top: 0;
     left: 0;
     width: fit-content;
     height: 100%;
@@ -43,13 +42,11 @@
 }
 
 .nomeProjeto {
-    /* font: 600 1.5em/1 'Raleway', sans-serif; */
   font-size: 25px;
   color: rgba(0,0,0,.5);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .5em;
-  /* position: absolute; */
   top: 25%;
   width: 100%;
 }

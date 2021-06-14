@@ -66,227 +66,67 @@
 <!--   CARROUSSEL   -->
 
 <!--   JUMBOTRON PRODUTOS   -->
-<div class="jumbotron jumbotron-fluid bg-faded mt-5 p-4" style="background-color: #FEF7D7;">
+<div class="jumbotron jumbotron-fluid bg-faded mt-5 p-4" style="background-color: #FFFFFF;">
   <div class="container d-flex justify-content-center">
     <h1 class="display-4 estilo" id="produtos">Produtos</h1>
   </div>
 
   <div class="row d-flex justify-content-center mt-4">
     <div class="col-md-12 d-flex justify-content-center">
-      <button *ngIf='authService.adm() || authService.doador()' data-toggle="modal" data-target="#novaPostagem" class=" btn text-light" style="background-color: rgba(112, 85, 69, 0.753);">Cadastrar um Produto</button>
+      <button *ngIf='authService.adm() || authService.doador()' data-toggle="modal" data-target="#novaPostagem"
+        class=" btn text-light" style="background-color: rgba(112, 85, 69, 0.753);">Cadastrar um Produto</button>
     </div>
   </div>
 
 </div>
 <!--   JUMBOTRON PRODUTOS   -->
 
-<!--   BOTÃO DE NOVAS POSATGENS   -->
-
-<!-- <div class="row d-flex justify-content-center mb-4">
-  <div class="col-md-12 d-flex justify-content-center">
-    <button *ngIf='authService.adm() || authService.doador()' data-toggle="modal" data-target="#novaPostagem" class="btn btn-info">Cadastrar um Produto</button>
-  </div>
-</div> -->
-
-<!--   BOTÃO DE NOVAS POSATGENS   -->
-
 <!--   CARD SLIDER   -->
- <div class="container">
+<div class="container">
   <div class="row">
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-  <!--   INDICATORES   -->
-  <ol class="carousel-indicators">
-    <li class="btn-floating" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li class="btn-floating" data-target="#multi-item-example" data-slide-to="1"></li>
-  </ol>
-  <!--   INDICATORES   -->
+      <!--   INDICATORES   -->
+      <ol class="carousel-indicators">
+        <li class="btn-floating" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li class="btn-floating" data-target="#multi-item-example" data-slide-to="1"></li>
+      </ol>
+      <!--   INDICATORES   -->
 
-  <!--   SLIDES   -->
+      <!--   SLIDES   -->
 
-    <div class="carousel-inner" role="listbox">
+      <div class="carousel-inner" role="listbox">
 
 
-        <div  class="carousel-item active">
+        <div class="carousel-item active">
 
           <div *ngFor='let item of listaProdutos' class="col-md-3" style="float:left">
-           <div class="card mb-2">
+            <div class="card mb-2">
               <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">{{item.nome}}</h4>
                 <p class="card-text">{{item.descricao}}</p>
                 <button class="btn btn-outline-success mr-3 mb-2">Mais Informações</button>
-                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-edit', item.id]" class="btn btn-outline-info mr-2">Editar</button>
-                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-delete', item.id]" class="btn btn-outline-danger mr-3">Apagar</button>
+                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-edit', item.id]"
+                  class="btn btn-outline-info mr-2">Editar</button>
+                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-delete', item.id]"
+                  class="btn btn-outline-danger mr-3">Apagar</button>
               </div>
             </div>
           </div>
 
-       </div>
-      <!--<nav>
-        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-
-          <a class="nav-item nav-link active" id="nav-todosProdutos-tab" data-toggle="tab" href="#nav-todosProdutos"
-            role="tab" aria-controls="nav-todosProdutos" aria-selected="true">Todos os Produtos</a>
-
-          <a (click)='findByIdUsuario()' class="nav-item nav-link" id="nav-meusProdutos-tab" data-toggle="tab"
-            href="#nav-meusProdutos" role="tab" aria-controls="nav-meusProdutos" aria-selected="false">Meus Produtos</a>
-
-          <a class="nav-item nav-link" id="nav-produtosCategoria-tab" data-toggle="tab" href="#nav-produtosCategoria"
-            role="tab" aria-controls="nav-produtosCategoria" aria-selected="false">Produtos por Categoria</a>
-        </div>
-      </nav>
-      <div class="tab-content mt-5" id="nav-tabContent">
-
-        <div class="tab-pane fade show active" id="nav-todosProdutos" role="tabpanel"
-          aria-labelledby="nav-todosProdutos-tab">
-
-          <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of listaProdutos'>
-              <div class="card-body">
-                <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
-                <h5 class="card-title">{{item.nome}}</h5>
-                <small class="text-muted">Categoria: {{item.categoria.descricao}} </small>
-                <p class="card-text">{{item.descricao}}</p>
-                <p class="card-text"><small class="text-muted">Doado por:{{item.usuario.nome}}</small></p>
-              </div>
-            </div>
-
-          </div>
         </div>
 
-        <div class="tab-pane fade" id="nav-meusProdutos" role="tabpanel" aria-labelledby="nav-meusProdutos-tab">
-
-
-          <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of usuario.produto'>
-              <div class="card-body">
-                <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
-                <h5 class="card-title">{{item.nome}}</h5>
-                <small class="text-muted">Categoria: {{item.categoria.descricao}} </small>
-                <p class="card-text">{{item.descricao}}</p>
-                <!-- <p class="card-text"><small class="text-muted">{{}}</small></p> -->
-
-                <!-- <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                <a [routerLink]="['/produto-delete', item.id]" class="text-danger" href="">Apagar</a>
-
-                 </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="nav-produtosCategoria" role="tabpanel"
-          aria-labelledby="nav-produtosCategoria-tab">
-
-          <div class="card-columns" *ngFor='let categoria of listaCategorias'>
-            <div class="card text-center" *ngFor='let item of categoria.produto'>
-              <div class="card-body">
-                <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
-                <h5 class="card-title">{{item.nome}}</h5>
-                <p class="card-text">{{item.descricao}}</p>
-                <!-- <p class="card-text"><small class="text-muted">{{}}</small></p> -->
-              <!-- </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       </div>
-
-
-      <!-- First slide
-     <div class="carousel-item active">
-
-      <div class="col-md-3" style="float:left">
-       <div *ngFor='let item of usuario.produto' class="card mb-2">
-          <img class="card-img-top" src="https://i.imgur.com/auzVsWN.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">{{item.nome}}</h4>
-            <p class="card-text">{{item.categoria.descricao}</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-       <!-- First slide -->
-      <!-- <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top" width="209" height="209" src="https://imgur.com/zBSufTt" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Coletor Menstrual</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top" width="183" height="183" src="https://i.imgur.com/hrJoDd2.jpg"
-            alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Absorvente reutilizável</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div> -->
-
     </div>
-    <!--/.First slide-->
 
-    <!--Second slide-->
-    <!-- <div class="carousel-item">
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top" src="https://i.imgur.com/5ks10EP.jpg"
-            alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Absorvente interno</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top" width="190" height="190" src="https://i.imgur.com/MpHTXuQ.jpg"
-            alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Absorvente</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!--/.Second slide-->
   </div>
 </div>
 
-<!--Controls-->
-<div class="controls-top ml-3 d-flex justify-content-center">
-  <a class="btn-floating mr-1" href="#multi-item-example" data-slide="prev"><i id="controle" class="fa fa-circle-thin"
-      aria-hidden="true"></i></a>
-  <a class="btn-floating" href="#multi-item-example" data-slide="next"><i id="controle" class="fa fa-circle-thin"
-      aria-hidden="true"></i></a>
-</div>
-<!--/.Controls-->
 <!--/Card Slider-->
 
 <!--Jumbotron colaboradores-->
-<div class="jumbotron jumbotron-fluid bg-faded mt-5 p-5" style="background-color: #FEF7D7;">
+<div class="jumbotron jumbotron-fluid bg-faded mt-5 p-5" style="background-color: #FFFFFF;">
   <div class="container d-flex justify-content-center">
     <h1 class="display-4 estilo" id="grupo">Equipe</h1>
   </div>
@@ -310,22 +150,24 @@
           </div>
           <ul class="s-network">
             <li>
-                <a href="https://www.linkedin.com/in/agni-dmitri/" target="_blank" class="icoLinkedinn">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://www.linkedin.com/in/agni-dmitri/" target="_blank" class="icoLinkedinn">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
             </li>
             <li>
-                <a href="https://github.com/agnidmitri" target="_blank" class="icoGithub">
-                    <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://github.com/agnidmitri" target="_blank" class="icoGithub">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+              </a>
             </li>
-        </ul>
+          </ul>
           <div class="divider"></div>
           <div class="name">Agni</div>
           <div class="title">
-            <p class="mr-3 text-justify">Sou uma pessoa trans não binária, tenho vinte e um anos e sou desenvolvedore full stack
+            <p class="mr-3 text-justify">Sou uma pessoa trans não binária, tenho vinte e um anos e sou desenvolvedore
+              full stack
               junior. Meu objetivo profissional é trabalhar como dev front-end e aprimorar minhas habilidades com UI/UX
-              para tornar a tecnologia cada vez mais acessível a todos os públicos. Minha missão na tecnologia é ser representatividade para pessoas trans e não brancas.</p>
+              para tornar a tecnologia cada vez mais acessível a todos os públicos. Minha missão na tecnologia é ser
+              representatividade para pessoas trans e não brancas.</p>
           </div>
         </div>
         <!-- /Primeira pessoa -->
@@ -340,21 +182,24 @@
           </div>
           <ul class="s-network">
             <li>
-                <a href="https://www.linkedin.com/in/hugosaladini/" target="_blank" class="icoLinkedinn">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://www.linkedin.com/in/hugosaladini/" target="_blank" class="icoLinkedinn">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
             </li>
             <li>
-                <a href="https://github.com/HugoSaladini" target="_blank" class="icoGithub">
-                    <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://github.com/HugoSaladini" target="_blank" class="icoGithub">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+              </a>
             </li>
-        </ul>
+          </ul>
           <div class="divider"></div>
           <div class="name">Hugo</div>
           <div class="title">
-            <p class="mr-3 ml-3 text-justify">Sou uma pessoa bem comunicativa, minhas experiências de trabalho me moldaram uma pessoa com um senso critico, e tentando sempre achar um equilíbrio entre as ações, pensando no bem estar de todos visando os valores e princípios, o que me da brilho nos olhos é gerar valor para as pessoas através da tecnologia, busco sempre me aprimorar e conhecer um pouco sobre todo.
-              </p>
+            <p class="mr-3 ml-3 text-justify">Sou uma pessoa bem comunicativa, minhas experiências de trabalho me
+              moldaram uma pessoa com um senso critico, e tentando sempre achar um equilíbrio entre as ações, pensando
+              no bem estar de todos visando os valores e princípios, o que me da brilho nos olhos é gerar valor para as
+              pessoas através da tecnologia, busco sempre me aprimorar e conhecer um pouco sobre todo.
+            </p>
           </div>
         </div>
         <!-- /Segunda pessoa -->
@@ -369,20 +214,23 @@
           </div>
           <ul class="s-network">
             <li>
-                <a href="https://www.linkedin.com/in/kathleen-fidelis/" target="_blank" class="icoLinkedinn">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://www.linkedin.com/in/kathleen-fidelis/" target="_blank" class="icoLinkedinn">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
             </li>
             <li>
-                <a href="https://github.com/Kathleen-Fidelis" target="_blank" class="icoGithub">
-                    <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://github.com/Kathleen-Fidelis" target="_blank" class="icoGithub">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+              </a>
             </li>
-        </ul>
+          </ul>
           <div class="divider"></div>
           <div class="name">Kathleen</div>
           <div class="title">
-            <p class="mr-3 ml-3 text-justify">Sou uma pessoa que ama aprender coisas novas, e na tecnologia tenho a oportunidade de estar sempre estudando. Com minhas experiências, aprendi a ter responsabilidade pessoal e ser persistente. E com isso, procuro a cada dia ser uma desenvolvedora melhor. Meu objetivo é poder fazer a diferença na vida das pessoas através da tecnologia.</p>
+            <p class="mr-3 ml-3 text-justify">Sou uma pessoa que ama aprender coisas novas, e na tecnologia tenho a
+              oportunidade de estar sempre estudando. Com minhas experiências, aprendi a ter responsabilidade pessoal e
+              ser persistente. E com isso, procuro a cada dia ser uma desenvolvedora melhor. Meu objetivo é poder fazer
+              a diferença na vida das pessoas através da tecnologia.</p>
           </div>
         </div>
 
@@ -403,20 +251,23 @@
           </div>
           <ul class="s-network">
             <li>
-                <a href="https://www.linkedin.com/in/niashi/" target="_blank" class="icoLinkedinn">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://www.linkedin.com/in/niashi/" target="_blank" class="icoLinkedinn">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
             </li>
             <li>
-                <a href="https://github.com/Niashi" target="_blank" class="icoGithub">
-                    <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://github.com/Niashi" target="_blank" class="icoGithub">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+              </a>
             </li>
-        </ul>
+          </ul>
           <div class="divider"></div>
           <div class="name">Mathias</div>
           <div class="title">
-            <p class="mr-3 ml-3 text-justify">Sou Mathias, paulista e paulistano e tenho 26 anos. Sou filho de imigrantes uruguaios que me ensinaram, antes de mais nada, o que é o verdadeiro interesse pelas coisas do mundo e também me mostraram que preciso dar tudo de mim, sempre. Gosto de tudo, mas sobretudo de jogos de raciocínio e de estudar. Tenho fascínio por seguir evoluindo.</p>
+            <p class="mr-3 ml-3 text-justify">Sou Mathias, paulista e paulistano e tenho 26 anos. Sou filho de
+              imigrantes uruguaios que me ensinaram, antes de mais nada, o que é o verdadeiro interesse pelas coisas do
+              mundo e também me mostraram que preciso dar tudo de mim, sempre. Gosto de tudo, mas sobretudo de jogos de
+              raciocínio e de estudar. Tenho fascínio por seguir evoluindo.</p>
           </div>
         </div>
         <!-- /Quarta pessoa -->
@@ -428,20 +279,23 @@
           </div>
           <ul class="s-network">
             <li>
-                <a href="https://www.linkedin.com/in/falecomruthferreira/" target="_blank" class="icoLinkedinn">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://www.linkedin.com/in/falecomruthferreira/" target="_blank" class="icoLinkedinn">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
             </li>
             <li>
-                <a href="https://github.com/ruthfs" target="_blank" class="icoGithub">
-                    <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
+              <a href="https://github.com/ruthfs" target="_blank" class="icoGithub">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+              </a>
             </li>
-        </ul>
+          </ul>
           <div class="divider"></div>
           <div class="name">Ruth</div>
           <div class="title">
-            <p class="mr-3 ml-3 text-justify">Aprendizado e interesses diversos fizeram parte de minha vida e essas características que me trouxeram para o âmbito da tecnologia com vontade de me desafiar e construir minha carreira em uma nova área, usando minha adaptabilidade e persistência, me tornei desenvolvedora full stack e busco me aprimorar continuamente.</p>
+            <p class="mr-3 ml-3 text-justify">Aprendizado e interesses diversos fizeram parte de minha vida e essas
+              características que me trouxeram para o âmbito da tecnologia com vontade de me desafiar e construir minha
+              carreira em uma nova área, usando minha adaptabilidade e persistência, me tornei desenvolvedora full stack
+              e busco me aprimorar continuamente.</p>
           </div>
         </div>
         <!-- /Quarta pessoa -->
@@ -486,8 +340,9 @@
         </div>
 
         <div class="form-group">
-          <label  for="imagem">Imagem</label>
-          <input [(ngModel)]='produto.imagem'  type="imagem" class="form-control" id="imagem" placeholder="Coloque aqui o link da Imagem">
+          <label for="imagem">Imagem</label>
+          <input [(ngModel)]='produto.imagem' type="imagem" class="form-control" id="imagem"
+            placeholder="Coloque aqui o link da Imagem">
         </div>
 
         <div class="form-group">
@@ -527,7 +382,3 @@
 
 
 <!-- MODAL DE NOVAS POSTAGENS -->
-
-
-
-
