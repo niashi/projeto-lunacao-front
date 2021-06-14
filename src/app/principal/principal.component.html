@@ -1,8 +1,10 @@
 <!--   NOME LOGO   -->
 <div class="container">
-  <div class="row d-flex justify-content-center mt-5 mb-5">
-    <h1 class="nomeProjeto"><span data-shadow-text="Lunação">Lunação</span><br>um projeto contra a pobreza menstrual
-    </h1>
+  <div class="row mt-5 mb-5">
+    <div class="col-md-12 d-flex justify-content-center">
+      <h1 class="nomeProjeto"><span data-shadow-text="Lunação">Lunação</span><br>um projeto contra a pobreza menstrual
+      </h1>
+    </div>
   </div>
 </div>
 <!--   NOME LOGO   -->
@@ -81,49 +83,27 @@
 </div>
 <!--   JUMBOTRON PRODUTOS   -->
 
-<!--   CARD SLIDER   -->
 <div class="container">
   <div class="row">
-    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-      <!--   INDICATORES   -->
-      <ol class="carousel-indicators">
-        <li class="btn-floating" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-        <li class="btn-floating" data-target="#multi-item-example" data-slide-to="1"></li>
-      </ol>
-      <!--   INDICATORES   -->
-
-      <!--   SLIDES   -->
-
-      <div class="carousel-inner" role="listbox">
-
-
-        <div class="carousel-item active">
-
-          <div *ngFor='let item of listaProdutos' class="col-md-3" style="float:left">
-            <div class="card mb-2">
-              <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">{{item.nome}}</h4>
-                <p class="card-text">{{item.descricao}}</p>
-                <button class="btn btn-outline-success mr-3 mb-2">Mais Informações</button>
-                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-edit', item.id]"
-                  class="btn btn-outline-info mr-2">Editar</button>
-                <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-delete', item.id]"
-                  class="btn btn-outline-danger mr-3">Apagar</button>
-              </div>
-            </div>
+    <div class="col-md-12 d-flex flex-wrap justify-content-around">
+        <div *ngFor='let item of listaProdutos' class="card mb-5 mr-2 ml-2 produtos">
+          <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">{{item.nome}}</h4>
+            <p class="card-text">{{item.descricao}}</p>
+            <button class="btn btn-outline-success mr-3 mb-2">Mais Informações</button>
+            <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-edit', item.id]"
+              class="btn btn-outline-info mr-2">Editar</button>
+            <button *ngIf='authService.adm() || authService.doador()' [routerLink]="['/produto-delete', item.id]"
+              class="btn btn-outline-danger mr-3">Apagar</button>
           </div>
-
         </div>
-
-      </div>
     </div>
-
   </div>
 </div>
 
-<!--/Card Slider-->
+
+
 
 <!--Jumbotron colaboradores-->
 <div class="jumbotron jumbotron-fluid bg-faded mt-5 p-5" style="background-color: #FFFFFF;">

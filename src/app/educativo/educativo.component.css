@@ -51,6 +51,12 @@
   width: 100%;
 }
 
+@media(max-width: 767px) {
+    .nomeProjeto {
+      font-size: 10px;
+    }
+} 
+
 span, span:after {
     font-weight: 900;
   color: #E0BA8A;

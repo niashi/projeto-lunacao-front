@@ -115,11 +115,17 @@ body {
     width: 100%;
 }
 
+@media(max-width: 767px) {
+  .nomeProjeto {
+    font-size: 10px;
+  }
+} 
+
 span, span:after {
 	  font-weight: 900;
     color: #E0BA8A;
-    white-space: nowrap;
-    display: inline-block;
+    white-space: wrap; 
+    display: inline-block; 
     position: relative;
     letter-spacing: .1em;
     padding: .2em 0 .25em 0;
@@ -181,3 +187,6 @@ ul.s-network li {
   color: rgb(0, 0, 0);
 }
 /* redes sociais */
+.produtos{
+  width: 20rem;
+}
