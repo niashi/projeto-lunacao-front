@@ -38,7 +38,7 @@ Usuário administrador
 
 ## Implementação Futuras
 
-1. Implementação do carrinho no back-end
+1. Implementação de uma sacola de produtos
 2. Implementação de formulário para análise de situação ecônomica. 
 
 
