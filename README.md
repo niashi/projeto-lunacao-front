@@ -1,27 +1,52 @@
-# ProjetoLunacaoFront
+# Lunação
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+:trophy:  Projeto Integrador do Grupo 1 da turma 19 desenvolvido durante o Bootcamp de Desenvolvimento Web Java da [Generation Brasil](https://brazil.generation.org/).
 
-## Development server
+Nosso projeto é baseado no Objetivo de Desenvolvimento Sustentável 5 da [ONU - Organização das Nações Unidas](http://www.agenda2030.org.br/ods/5/), que busca promover a igualdade de gênero.
+<p>
+O e-commerce Lunação tem como proposta o combate à pobreza menstrual, tendo em vista que esse problema reforça a desigualdade de gênero, privando pessoas menstruantes do acesso à educação, trabalho e dignidade.
+Nosso objetivo principal é levar itens de higiene menstrual providos por pessoas e empresas doadoras até pessoas menstruantes em situação econômica vulnerável. 
+O projeto também conta com uma páginad de educativo, que traz mais informações acerca dos impactos causados pela pobreza menstrual no nosso país, explicitando  que esses impactos atingem não apenas mulheres cisgêneras, mas também pessoas trans menstruantes. Essa página também conta com cards de ilustração feitos por um ilustrador trans não binário, [Nimbus Aragón](https://www.instagram.com/nimbusviridis/). Nimbus criou uma coleção de ilustrações explicativas sobre gênero e fisiologia.
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Funcionalidades da Aplicação
 
-## Code scaffolding
+Site responsivo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+funcionalidades de usuário:
 
-## Build
+Usuário comum
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- alteração de nome de usuário
+- cadastro e login
+ 
+Usuário doador 
 
-## Running unit tests
+- alteração de nome de usuário
+- cadastro e login
+- cadastro de produtos 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Usuário administrador
 
-## Running end-to-end tests
+- alteração de nome de usuário
+- adicionar novos produtos e categorias
+- editar produtos e categorias
+- excluir produtos e categorias
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Implementação Futuras
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Implementação do carrinho no back-end
+2. Implementação de formulário para análise de situação ecônomica. 
+
+## Equipe
+
+[Agni Dmitri](https://github.com/agnidmitri "GitHub")
+
+[Hugo Saladini](https://github.com/HugoSaladini "GitHub")
+
+[Kathleen Fidelis](https://github.com/Kathleen-Fidelis "GitHub")
+
+[Mathias Niashi](https://github.com/Niashi "GitHub")
+
+[Ruth Ferreira](https://github.com/ruthfs "GitHub")
