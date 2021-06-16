@@ -56,4 +56,4 @@ Usuário administrador
 [Ruth Ferreira](https://github.com/ruthfs "GitHub")
 
 
-acesse nosso projeto: https://lunacao.netlify.app/
+acesse a versão 1.0 do nosso projeto: https://lunacao.netlify.app/
