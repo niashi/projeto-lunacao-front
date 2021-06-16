@@ -1,6 +1,6 @@
 # Lunação
 
-:trophy:  Projeto Integrador do Grupo 1 da turma 19 desenvolvido durante o Bootcamp de Desenvolvimento Web Java da [Generation Brasil](https://brazil.generation.org/).
+Projeto Integrador do Grupo 1 da turma 19 desenvolvido durante o Bootcamp de Desenvolvimento Web Java da [Generation Brasil](https://brazil.generation.org/).
 
 Nosso projeto é baseado no Objetivo de Desenvolvimento Sustentável 5 da [ONU - Organização das Nações Unidas](http://www.agenda2030.org.br/ods/5/), que busca promover a igualdade de gênero.
 <p>
