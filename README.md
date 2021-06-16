@@ -3,11 +3,11 @@
 Projeto Integrador do Grupo 1 da turma 19 desenvolvido durante o Bootcamp de Desenvolvimento Web Java da [Generation Brasil](https://brazil.generation.org/).
 
 Nosso projeto é baseado no Objetivo de Desenvolvimento Sustentável 5 da [ONU - Organização das Nações Unidas](http://www.agenda2030.org.br/ods/5/), que busca promover a igualdade de gênero.
-<p>
+
 O e-commerce Lunação tem como proposta o combate à pobreza menstrual, tendo em vista que esse problema reforça a desigualdade de gênero, privando pessoas menstruantes do acesso à educação, trabalho e dignidade.
 Nosso objetivo principal é levar itens de higiene menstrual providos por pessoas e empresas doadoras até pessoas menstruantes em situação econômica vulnerável. 
 O projeto também conta com uma páginad de educativo, que traz mais informações acerca dos impactos causados pela pobreza menstrual no nosso país, explicitando  que esses impactos atingem não apenas mulheres cisgêneras, mas também pessoas trans menstruantes. Essa página também conta com cards de ilustração feitos por um ilustrador trans não binário, [Nimbus Aragón](https://www.instagram.com/nimbusviridis/). Nimbus criou uma coleção de ilustrações explicativas sobre gênero e fisiologia.
-</p>
+
 
 ## Funcionalidades da Aplicação
 
