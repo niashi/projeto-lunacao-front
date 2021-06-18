@@ -23,7 +23,8 @@ export class UserEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
 
   ) { }
 
@@ -51,12 +52,12 @@ export class UserEditComponent implements OnInit {
     this.usuario.tipo = this.tipoUser
 
     if(this.usuario.senha != this.confirmarSenha) {
-      alert('As senhas estão incorretas!')
+      this.alertas.showAlertDanger('As senhas estão incorretas!')
     }else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/principal'])
-        alert('Suas alterações foram salvas! Faça login novamente para completar a atualização.')
+        this.alertas.showAlertSuccess('Suas alterações foram salvas! Faça login novamente para completar a atualização.')
 
           this.router.navigate(['/logar'])
           environment.token=''
@@ -75,6 +76,6 @@ export class UserEditComponent implements OnInit {
      })
    }
 
-   
+
 }
 
